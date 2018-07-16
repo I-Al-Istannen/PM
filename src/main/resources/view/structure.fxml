@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane fx:controller="control.list.ListController" prefHeight="600" prefWidth="600" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+
+   <top>
+      <JFXTextField BorderPane.alignment="CENTER" />
+   </top>
+
+   <center>
+      <JFXListView fx:id="accountsList" BorderPane.alignment="CENTER" />
+   </center>
+
+   <bottom>
+      <HBox BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+         </padding>
+         <Label text="Label"/>
+      </HBox>
+   </bottom>
+
+   <stylesheets>
+      <URL value="@style.css" />
+   </stylesheets>
+</BorderPane>
