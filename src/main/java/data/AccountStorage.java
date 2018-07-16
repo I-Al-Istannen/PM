@@ -1,31 +1,28 @@
 package data;
 
-import model.Account;
-
 import java.util.HashMap;
 import java.util.Map;
+import model.Account;
 
-public class AccountStorage
-{
-    private static AccountStorage instance = null;
-    private final Map<String, Account> accounts;
+public class AccountStorage {
 
-    private AccountStorage()
-    {
-        this.accounts = new HashMap<>();
+  private static AccountStorage instance = null;
+  private final Map<String, Account> accounts;
+
+  private AccountStorage() {
+    this.accounts = new HashMap<>();
+  }
+
+  public static AccountStorage getInstance() {
+    if (instance == null) {
+      instance = new AccountStorage();
     }
 
-    public static AccountStorage getInstance()
-    {
-        if(instance == null)
-            instance = new AccountStorage();
+    return instance;
 
-        return instance;
+  }
 
-    }
-
-    public Map<String, Account> getAccounts()
-    {
-        return accounts;
-    }
+  public Map<String, Account> getAccounts() {
+    return accounts;
+  }
 }
